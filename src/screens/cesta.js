@@ -7,7 +7,7 @@ import Texto from '../screens/texto'
 const widht = Dimensions.get('screen').width;
 
 if (styles?.fontWeight === 'bold') {
-    styles = styles.textoNegrito;
+    style = styles.textoNegrito;
 }
 
 export default function Cesta() {
@@ -77,9 +77,9 @@ const styles = StyleSheet.create ({
     },
     price: {
         color: '#2a9f85',
-        fontWeight: 'bold',
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8,
+        fontWeight: 'bold'
     },
 })
