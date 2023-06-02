@@ -1,10 +1,9 @@
 import React from 'react';
-import { StyleSheet, View, Image } from 'react-native';
-import logo from '../../assets/logo.png'
+import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import Texto from '../components/Texto';
 
 
-export default function Details({ nome, logoFazenda, nomeFazenda, desc, preco}){
+export default function Details({ nome, logoFazenda, nomeFazenda, desc, preco, btn}){
     return <>
         <View style={styles.basket}>
             <Texto style={styles.name}>{ nome }</Texto>
@@ -14,6 +13,10 @@ export default function Details({ nome, logoFazenda, nomeFazenda, desc, preco}){
             </View>
             <Texto style={styles.desc}>{ desc }</Texto>
             <Texto style={styles.price}>{ preco }</Texto>
+
+            <TouchableOpacity style={styles.btn}>
+                <Texto style={styles.btntext}>{ btn }</Texto>
+            </TouchableOpacity>
         </View>
     </>
 }
@@ -52,5 +55,19 @@ const styles = StyleSheet.create ({
         lineHeight: 42,
         marginTop: 8,
         fontWeight: 'bold'
+    },
+    btn:{
+        marginTop: 16,
+        backgroundColor: "#2A9F85",
+        paddingVertical: 16,
+        borderRadius: 6,
+    },
+    btntext: {
+        textAlign: 'center',
+        color: "#ffffff",
+        fontSize: 16,
+        lineHeight: 26,
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
     },
 })
