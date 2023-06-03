@@ -1,14 +1,16 @@
+import React from 'react';
 import { Image, StyleSheet, Dimensions } from 'react-native';
-import Texto from '../components/Texto';
-import topobg from '../../assets/topo.png';
+
+import Texto from '../../../components/Texto';
+
+import topo from '../../../../assets/topo.png';
 
 const widht = Dimensions.get('screen').width;
 
 
-export default function topo({titulo}) {
+export default function Topo({ titulo }) {
     return <>
-        <Image source={topobg} style={styles.topo} />
-        <Texto style={styles.tittle}>{ titulo }</Texto>
+        <Image source={topo} style={styles.topo} />
     </>
 }
 

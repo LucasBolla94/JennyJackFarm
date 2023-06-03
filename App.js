@@ -1,9 +1,9 @@
-import { StatusBar, ScrollView } from 'react-native';
-import Cesta from './src/screens';
-import Topo from './src/screens/topo';
+import React from 'react';
+import { StatusBar, SafeAreaView, View } from 'react-native';
 import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
-import mock from './src/mocks/cesta';
 import AppLoading from 'expo-app-loading';
+import Cesta from './src/screens/Cesta'
+import mock from './src/mocks/cesta';
 
 export default function App() {
   const [fontloaded] = useFonts({
@@ -17,10 +17,9 @@ export default function App() {
 
 
   return (
-    <ScrollView>
+    <SafeAreaView>
       <StatusBar />
       < Cesta {...mock} />
-      <StatusBar style="auto" />
-    </ScrollView>
+    </SafeAreaView>
   );
 }

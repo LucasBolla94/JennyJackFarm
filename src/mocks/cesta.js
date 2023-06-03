@@ -14,7 +14,7 @@ const cesta = {
         logoFazenda: logo,
         nomeFazenda: 'JennyJack Farm',
         desc: 'Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha',
-        preco: 'R$40,00',
+        preco: 'R$ 40,oo',
         btn: 'Comprar',
     },
     itens: {
